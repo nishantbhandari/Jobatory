@@ -4,13 +4,14 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="msapplication-tap-highlight" content="no">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>   
-    <script src="phonegap.js"></script>
-        <script src="cdv-plugin-fb-connect.js"></script>
-        <script src="facebook-js-sdk.js"></script>
     <script>
     
     function clicked(){
-    window.location = "http://yellowpages.com.au/"
+
+        localStorage.setItem("business", document.getElementById('business-name').value);
+        localStorage.setItem("location", document.getElementById('location').value);
+        window.location = "result.html";
+
     }
     </script>
 <link rel="stylesheet" type="text/css" href="css/signup.css">
