@@ -115,6 +115,7 @@
                 $("#gender").val(window.localStorage.getItem("gender"));
                 $("#logginn").hide();
                 document.write(window.localStorage.getItem("name"));
+                console.log(window.localStorage.getItem("name"));
                 
                 
             }
@@ -140,6 +141,7 @@
                                     window.localStorage.setItem("pin", cont[3]);
                                     window.localStorage.setItem("address", cont[4]);
                                     window.location.href = "thank-you.html";
+                                    console.log(window.localStorage.getItem("name"));
                                    
                                     
                                 }
