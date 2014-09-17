@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.standardchartered.gooddeedmarathon" versionCode = "13" version = "1.0.0">
+
+
+    <name>jobSearch</name>
+
+
+
+    <author href="http://www.sushil-s.com/" email="sushil.sud@gmail.com">Sushil Sudhakaran</author>
+
+    <preference name="phonegap-version" value="3.5.0" />
+    <preference name="fullscreen" value="true" />
+
+    <access origin="*"/>
+    <content src="index.html" />
+    
+    <preference name="android-minSdkVersion" value="14" />
+
+    <gap:platform name="android" />
+  
+
+    <gap:plugin name="com.phonegap.plugins.facebookconnect">
+        <param name="APP_ID" value="1504921559755467" />
+        <param name="APP_NAME" value="jobSearch" />
+    </gap:plugin>
+    
+    <gap:plugin name="com.adobe.plugins.gaplugin" version="2.1.5" />
+    
+    <gap:plugin name="nl.x-services.plugins.socialsharing" version="2.3" />
+  
+    
+
+    
+
+</widget>
