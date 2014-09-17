@@ -9,6 +9,14 @@
         <script src="facebook-js-sdk.js"></script>
 <link rel="stylesheet" type="text/css" href="css/signup.css">
 <meta name="viewport" content="width=320" />
+    <script>
+        function move()
+        {
+            window.location="signup.html";
+        }
+        
+    </script> 
+    
 </head>
 <body>
 <nav>
@@ -20,7 +28,7 @@
 <input type="email" name="email"  id="email" class="loginT" placeholder="Email" align="center"/><br /> 
 <input type="password" name="password" id="password" class="loginT" placeholder="Password" align="center" /><br />
 
-<input type="button" id="button" />
+<input type="button" id="button" onClick =  "move()" />
     
 </div>
 </form>

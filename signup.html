@@ -7,11 +7,46 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
 <link rel="stylesheet" type="text/css" href="css/signup.css">
 <meta name="viewport" content="width=320" />
+<script>
+function pass() 
+{
+    var invalid = " "; // Invalid character is a space
+    var minLength = 6; // Minimum length
+    var name = document.form1.name.value;    
+    var pw1 = document.form1.password.value;
+    var pw2 = document.form1.repassword.value;
+    var email = document.form1.email.value;
+    // check for a value in both fields.
+    if (pw1 == '' || pw2 == '' || name == '' || email == '' ) 
+    {
+        alert('You cannot leave any field blank.');
+        return false;
+    }
+    if (document.form1.password.value.indexOf(invalid) > -1) 
+    {
+        alert("Sorry, spaces are not allowed.");
+        return false;
+    }
+    
+    if (pw1 != pw2) 
+    {
+        alert ("Password doesnot match.");
+        return false;
+    }
+    else 
+    {
+        alert ("Registration Sucessfull");
+        window.location="index.html";
+    }
+    
+}
+</script>
 </head>
 <body>
 <nav>
 <h1 style="font-family:STAR; " >Job Search</h1>
 </nav>
+</div> 
 <h3 style="color:#ffcc00; font-family:HNUL;"> Join us!</h3>
 <form name="form1">
 <div style="text-align:center;" id="login"> 
@@ -19,8 +54,9 @@
 <input type="email" name="email"  id="email" class="loginT" placeholder="email" align="center"/><br /> 
 <input type="password" name="password" id="password" class="loginT" placeholder="password" align="center" /><br />
 <input type="password" name="repassword"  id="repassword" class="loginT" placeholder="verify password" align="center"/><br /><br />
-<input type="button" id="button" />
+<input type="button" id="button" onClick="pass()" />
 </div>
 </form>
+
 </body>
 </html>
