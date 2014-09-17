@@ -3,6 +3,7 @@
 
 
     <name>jobSearch</name>
+    
 
 
 
@@ -10,6 +11,27 @@
 
     <preference name="phonegap-version" value="3.5.0" />
     <preference name="fullscreen" value="true" />
+    <preference name="target-device" value="universal" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="detect-data-types" value="false" />
+    <preference name="exit-on-suspend" value="false" />
+
+    <preference name="webviewbounce" value="false" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="show-splash-screen-spinner" value="false" />
+    <preference name="auto-hide-splash-screen" value="true" /> <!-- if set to false, the splash screen must be hidden using a JavaScript API -->
+        
+    <!-- ANDROID PREFERENCES -->
+        
+    <preference name="android-minSdkVersion" value="7" /> <!-- minimum Android 2.1 -->
+    <!-- <preference name="android-maxSdkVersion" value="19" /> maximum Android 4.4 -->
+    <preference name="android-targetSdkVersion" value="19" /> <!-- targeting Android 4.4 -->
+    <preference name="android-installLocation" value="auto" />
+    <preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" />
+    <preference name="splash-screen-duration" value="5000" />
+
+    <preference name="load-url-timeout" value="20000" />
 
     <access origin="*"/>
     <content src="index.html" />
