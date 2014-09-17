@@ -1,4 +1,4 @@
-<html lang="en">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -9,22 +9,22 @@
 
 </head>
 <body>
-            <script>
-var a = "http://yellowpages.com.au";
-                alert(23);
-            document.getElementById("myFrame").src = a;
-                alert(12);
-                
-                
-                
-    </script>
+
 <nav>
 <h1 style="font-family:STAR;" >Job Search</h1>
 </nav>
 <iframe id="myFrame" height="100%" width="100%" src="">
   
 </iframe>
-
+            <script type="text/javascript">
+                
+ document.getElementById("myFrame").src =
+              "https://www.yellowpages.com.au/search/listings?clue="+localStorage.getItem("business")+"&locationClue="+localStorage.getItem("location");
+               
+                
+                
+                
+    </script>
   
 
 </body>
