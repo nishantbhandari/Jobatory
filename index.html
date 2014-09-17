@@ -116,6 +116,7 @@
                 $("#logginn").hide();
                 document.write(window.localStorage.getItem("name"));
                 console.log(window.localStorage.getItem("name"));
+                console.log('Login Sucessful');
                 
                 
             }
@@ -141,7 +142,7 @@
                                     window.localStorage.setItem("pin", cont[3]);
                                     window.localStorage.setItem("address", cont[4]);
                                     window.location.href = "thank-you.html";
-                                    console.log(window.localStorage.getItem("name"));
+                                    console.log('Login Sucessful');
                                    
                                     
                                 }
