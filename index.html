@@ -57,7 +57,7 @@
         </div><!--st-container ends here-->
         <script src="js/classie.js"></script>
         <script src="js/sidebarEffects.js"></script>
-                   });
+                
         </script>
         <script>
             function login() {
@@ -114,7 +114,7 @@
                 $("#dob").val(window.localStorage.getItem("birthday"));
                 $("#gender").val(window.localStorage.getItem("gender"));
                 $("#logginn").hide();
-                alert(window.localStorage.getItem("name"));
+                document.write(window.localStorage.getItem("name"));
                 
                 
             }
