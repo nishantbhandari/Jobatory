@@ -15,6 +15,7 @@
         window.localStorage.setItem("email", document.form1.email.value); 
          window.location = "layout.html"
     }
+        
 
     </script>
 <style>
@@ -160,7 +161,7 @@ text-align: center;
 }
     .loginT{
     color:#ffffff;
-    text-align: center;
+    
     font-size: 20px;
     font-weight: bold;
 background-color:#000000;
@@ -171,10 +172,12 @@ font-family: HNUL;
     border-bottom: 1px solid;
         border-color:#ffcc00;
   margin:30px;
+        text-align: center;
 
 }
     input{
-          text-align: center;
+ text-align: center;
+    
     }
 .loginT:focus{
 outline:none;
@@ -222,13 +225,13 @@ margin-top: 20px;
    <form name="form1">
 <div style="text-align:center;" id="login"> 
 
-    <input type="text" name="name" placeholder="name" id="name" class="loginT" /><br />
+    <input type="text" name="name" placeholder="name" id="name" class="loginT" align="center" /><br />
 
-    <input type="email" name="email"  id="email" class="loginT" placeholder="email" /><br /> 
+    <input type="email" name="email"  id="email" class="loginT" placeholder="email" align="center"/><br /> 
 
-    <input type="text" name="password" id="password" class="loginT" placeholder="password" /> <br />
+    <input type="text" name="password" id="password" class="loginT" placeholder="password" align="center" /> <br />
 
-    <input type="email" name="repassword"  id="repassword" class="loginT" placeholder="verify password" /><br /><br /> <br/>
+    <input type="email" name="repassword"  id="repassword" class="loginT" placeholder="verify password" align="center"/><br /><br />
 
 <input type="button" id="button" />
 
