@@ -1,0 +1,77 @@
+        nav {
+        display: hidden;
+      height: 50px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: opacity .5s ease-in;
+      background-color: #ffcc00;
+      border-bottom: solid 1px #a7a7aa;
+            
+            
+
+    }
+          @font-face {
+    font-family: 'HNUL'; /*a name to be used later*/
+    src: url('HNUL.otf'); /*URL to font*/
+}
+              @font-face {
+    font-family: 'STAR'; /*a name to be used later*/
+    src: url('Starjedi.otf'); /*URL to font*/
+}
+
+        nav > h1 {
+      text-align: center;
+      font: normal 14pt/17pt;
+            font-family: HNUL;
+    }
+html, body {
+    text-align:center;
+    color:#ffffff;
+    background-color:#000000;
+      padding: 0;
+      margin: 0;
+	  height:100%;
+	  width:100%;
+	  
+    }
+
+    .divs{
+        position:relative;
+        width:100%;
+        height: auto;
+    text-align: center;
+        font-family: HNUL;
+        font-size:22px;
+
+    }
+    .loginT{
+    color:#ffffff;
+    
+    font-size: 20px;
+    font-weight: bold;
+background-color:#000000;
+font-family: HNUL;
+    height: 30px;
+    width:250px;
+    border: 0px solid;
+    border-bottom: 1px solid;
+        border-color:#ffcc00;
+  margin:30px;
+        text-align: center;
+
+}
+    input{
+ text-align: center;
+    
+    }
+.loginT:focus{
+outline:none;
+}
+#button{
+    background-color:#000000;
+    border:none;
+    background-image:url('../images/submit.png');
+    background-repeat: no-repeat;
+    width:60px;
+    height:60px;
+    }
