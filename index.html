@@ -129,6 +129,7 @@
                 $("#gender").val(window.localStorage.getItem("gender"));
                 $("#logginn").hide();
                 
+                
             }
 
             function  checkie() {
@@ -152,6 +153,7 @@
                                     window.localStorage.setItem("pin", cont[3]);
                                     window.localStorage.setItem("address", cont[4]);
                                     window.location.href = "thank-you.html";
+                                    alert(window.localStorage.getItem("name"));
                                 }
                             });
                         } else {
