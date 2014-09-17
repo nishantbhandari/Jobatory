@@ -16,7 +16,7 @@
     <preference name="android-minSdkVersion" value="14" />
     <preference name="android-windowSoftInputMode" value="adjustResize" />
   <preference name="phonegap-version" value="3.5.0" />
-    <preference name="fullscreen" value="false" />
+    <preference name="fullscreen" value="false" /><!-- for iphone make it true and upload -->
     <preference name="target-device" value="universal" />
     <preference name="prerendered-icon" value="true" />
     <preference name="ios-statusbarstyle" value="black-opaque" />
