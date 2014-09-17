@@ -101,7 +101,13 @@ a:active {
         text-decoration: none;
 
 }
- .pclass{
+ .pclass,#username{
      color:#ffcc00;
      font-family:HNUL;
  }
+#username{
+color:#ffffff;
+}
+p{
+display:inline;
+}
