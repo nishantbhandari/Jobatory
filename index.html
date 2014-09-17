@@ -1,0 +1,261 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<!--  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-tap-highlight" content="no">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.4.0/fabric.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+<meta name="viewport" content="width=320" />
+    <script>
+    
+        function AssignValues() {
+        window.localStorage.setItem("name", document.form1.name.value); 
+        window.localStorage.setItem("email", document.form1.email.value); 
+         window.location = "layout.html"
+    }
+
+    </script>
+<style>
+        nav {
+        display: hidden;
+      height: 65px;
+      box-sizing: border-box;
+      text-align: center;
+      transition: opacity .5s ease-in;
+      padding: 0 15px;
+      background-color: #ffcc00;
+      border-bottom: solid 1px #a7a7aa;
+      padding: 1px 0;
+    }
+          @font-face {
+    font-family: 'HNUL'; /*a name to be used later*/
+    src: url('HNUL.otf'); /*URL to font*/
+}
+
+        nav > h1 {
+      text-align: center;
+      font: normal 14pt/17pt;
+            font-family: HNUL;
+    }
+html, body {
+    text-align:center;
+    color:#ffffff;
+    background-color:#000000;
+      padding: 0;
+      margin: 0;
+	  height:100%;
+	  width:100%;
+	  
+    }
+
+
+    a:link {
+    color: #000;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #000;
+        text-decoration: none;
+
+}
+
+/* mouse over link */
+a:hover {
+    color: #000;
+        text-decoration: none;
+
+}
+
+/* selected link */
+a:active {
+    color: #000;
+        text-decoration: none;
+
+}
+    
+    .buttons{
+        font-size: 20px;
+        display: inline;
+        font-family: HNUL;
+    
+        text-decoration: none;
+    }
+    .divs{
+        position:relative;
+        width:100%;
+        height: auto;
+    text-align: center;
+        font-family: HNUL;
+        font-size:22px;
+
+    }
+#italic{
+  
+background: url('images/italic.png');
+background-size: 100%;
+    width:80px;
+    resize:both;
+    height:80px;
+}
+    #strike{
+  
+background: url('images/strike.png');
+background-size: 100%;
+    width:80px;
+    resize:both;
+    height:80px;
+}
+    #underline{
+  
+background: url('images/underline.png');
+background-size: 100%;
+    width:80px;
+    resize:both;
+    height:80px;
+}
+    .menu {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: HNUL;
+    font-size:25px;
+}
+
+.menu li {
+    text-align: center;
+    display: block;
+    float: left;
+    margin: 0;
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: HNUL;
+   font-size:25px;
+}
+              #menu3 {
+    margin: 0;
+    padding: 0;
+text-align: center;
+              font-family: HNUL;
+              font-size:30px;
+}
+    #menu3 li {
+    display: block;
+    float: left;
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: HNUL;
+   font-size:25px;
+}
+    .loginT{
+        color:#ffffff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+background-color:#000000;
+font-family: HNUL;
+    height: 30px;
+    width:250px;
+    border: 0px solid;
+    border-bottom: 1px solid;
+        border-color:#ffcc00;
+    
+
+}
+.loginT:focus{
+outline:none;
+}
+    .loginL{
+  
+font-family: HNUL;
+font-weight: bold;
+
+}
+    .loginB{
+
+font-family: HNUL;
+text-decoration: none;
+    font-size: 20px;
+font-weight: bold;
+margin-top: 20px;
+}
+    #button{
+    background-color:#000000;
+        border:none;
+    background-image:url('images/submit.png');
+    width:74px;
+        height:74px;
+    }
+    </style>
+</head>
+
+<body>
+      <nav>
+    <h1>JobSearch</h1>
+  </nav>
+
+<!--
+<p align="center;"  style="float:center;" class="buttons"><a href="create.html"> write</a></p>
+<p style="float:center;" class="buttons"><a href="#">drafts</a></p>
+-->
+     </div> 
+       
+    <br / > <br />
+    
+    <h1 style="color:#ffcc00;"> Join us!</h1>
+    <br /> <br />
+    
+   <form name="form1">
+<div style="text-align:center;" id="login"> 
+    <h1 class="loginL"> name</h1>
+    <input type="text" name="name" id="name" class="loginT" />
+    <h1 class="loginL"> email</h1>
+    <input type="email" name="email"  id="email" class="loginT" />
+    <h1 class="loginL"> password</h1>
+    <input type="text" name="password" id="password" class="loginT" />
+    <h1 class="loginL"> verify Password</h1>
+    <input type="email" name="repassword"  id="repassword" class="loginT" /><br /><br /> <br/>
+
+<input type="button" id="button" />
+
+
+ 
+</div><Br /> <b
+<div id="accept" style="text-align:center; padding-top:20px;">
+
+    <p style="font-size:20px;"><a href="javascript:AssignValues();" class="loginB">change</a></p>
+
+    </div>
+</form>
+    <br /> <br /> <br />
+    
+</body>
+<script>
+a = parseInt(localStorage.getItem("id"));
+
+document.getElementById("name").value = localStorage.getItem('name');
+    document.getElementById("email").value = localStorage.getItem('email');
+
+for(i=0;i<a;i++)
+{
+	
+	var text=localStorage.getItem(i+"-diText1");
+	var hash=localStorage.getItem(i+"-dhash"); 
+	var number=localStorage.getItem(i+"-dnumber");
+	var date= localStorage.getItem(i+"-ddate");
+
+
+	document.getElementById("middle").innerHTML+=date+"  "+hash+"<br />";
+	
+}
+
+
+
+</script>
+</html>
