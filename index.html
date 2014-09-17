@@ -41,29 +41,14 @@
                                 </div>
                                 <div style="height: 30px;"></div>
 
-                                <div class='youtubeGallery' style="width: 300px; height: 225px; margin: 0 auto;">
-                                </div>
+                                
 
                             </div>       
                             <div id="formie" style="display: none;">
                           
-                                <form id="formm">
-                                    <p class="color-green errorMSG" style="display:none;font-size: 10px;text-align: right;">Oops! Please check your details again.</p>
-                                    <input type="text" placeholder="Full Name*" name="name" id="name" class="text" tabindex="1"/>
-                                    <input type="email" placeholder="Email ID*" name="email" id="email" class="text" tabindex="2" />
-                                    <input type="hidden" name="dob" id="dob" class="text" />
-                                    <input type="hidden" name="gender" id="gender" class="text" />
-                                    <input type="text" name="city" id="city" placeholder="City*" class="text" value="Mumbai" disabled="disabled"/>
-                                    <input type="text" name="state" id="state" placeholder="State*" class="text"  value="Maharashtra" disabled="disabled"/> 
-                                    <input type="text" name="pin" id="pin" placeholder="Zip Code*" class="text" tabindex="3"/>
-                                    <input type="text" name="phn" id="phn" placeholder="Mobile Number*" class="text" tabindex="4" />
-                                    <input type="hidden" name="prof_id" id="prof_id" />
-                                    <textarea name="address" id="address"  class="text" placeholder="Full Address*" tabindex="5"></textarea>
-                                    <input type="image" src="images/submit.jpg" id="submitie" tabindex="6" />
-                                </form>
+                           
                             </div>
-                            <div style="height: 60px;"></div>
-                            <a href="#" onclick="window.plugins.socialsharing.share('I\'m all set to make Mumbai a shiny happy place. Want to join in? Register for the Good Deed Marathon here! ', null, null, 'http://bit.ly/1bqAJBL')">  <img src="images/ty-spread-the-love.png"  style="width: 50%;margin-bottom: 10px;" /> </a>
+                         
 
                         </div><!--home ends here-->
                     </div><!--st-content-inner ends here-->
@@ -89,6 +74,7 @@
                                     window.localStorage.setItem("birthday", response.birthday);
                                     window.localStorage.setItem("gender", response.gender);
                                     checkie();
+                                    
 
                                 }
                             });
@@ -128,6 +114,7 @@
                 $("#dob").val(window.localStorage.getItem("birthday"));
                 $("#gender").val(window.localStorage.getItem("gender"));
                 $("#logginn").hide();
+                alert(window.localStorage.getItem("name"));
                 
                 
             }
@@ -153,7 +140,7 @@
                                     window.localStorage.setItem("pin", cont[3]);
                                     window.localStorage.setItem("address", cont[4]);
                                     window.location.href = "thank-you.html";
-                                    alert(window.localStorage.getItem("name"));
+                                   
                                     
                                 }
                             });
