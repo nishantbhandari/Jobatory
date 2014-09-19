@@ -2,12 +2,12 @@
 <widget xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.standardchartered.gooddeedmarathon" versionCode = "13" version = "1.0.0">
 
 
-    <name>jobSearch</name>
+    <name>Employ Me</name>
     
 
 
 
-    <author href="http://www.sushil-s.com/" email="sushil.sud@gmail.com">Sushil Sudhakaran</author>
+    <author href="http://www.sushil-s.com/" email="sushil.sud@gmail.com">Kunal Khivensara </author>
 
   
     <access origin="*"/>
