@@ -11,6 +11,10 @@
             
 function pass() 
 {
+                     document.getElementById('content').style.display = "block";
+        document.getElementById('login').style.display = "none";
+            document.getElementById('last').style.display = "none";
+
     var invalid = " "; // Invalid character is a space
     var minLength = 6; // Minimum length
     var name = document.form1.name.value;    
@@ -21,16 +25,25 @@ function pass()
     if (pw1 == '' || pw2 == '' || name == '' || email == '' ) 
     {
         alert('You cannot leave any field blank.');
+        document.getElementById('content').style.display = "none";
+        document.getElementById('login').style.display = "block";
+         document.getElementById('last').style.display = "block";
         return false;
     }
     if (document.form1.password.value.indexOf(invalid) > -1) 
     {
+                document.getElementById('content').style.display = "none";
+        document.getElementById('login').style.display = "block";
+         document.getElementById('last').style.display = "block";
         alert("Sorry, spaces are not allowed.");
         return false;
     }
     
     if (pw1 != pw2) 
     {
+                document.getElementById('content').style.display = "none";
+        document.getElementById('login').style.display = "block";
+         document.getElementById('last').style.display = "block";
         alert ("Password doesnot match.");
         return false;
     }
@@ -65,7 +78,7 @@ alert ("Registration Sucessfull,Please login");
 
         
  
-<h3 style="color:#ffcc00; font-family:HNUL;"> Join us!</h3>
+<h3 id="last" style="color:#ffcc00; font-family:HNUL;"> Join us!</h3>
 <form name="form1" action="http://tttales.net63.net/insert.php" method="post" >
 <div style="text-align:center;" id="login"> 
 <input type="text" name="name" placeholder="name" id="name" class="loginT" align="center" /><br />
@@ -77,6 +90,7 @@ alert ("Registration Sucessfull,Please login");
 </div>
     
 </form>
+    <div id="content"><img src="loader.gif"></div>
 
 </body>
 </html>
