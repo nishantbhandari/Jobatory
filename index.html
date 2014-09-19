@@ -35,7 +35,7 @@
             }
             else
             {
-                alert("Login Sucessfull!");
+                alert("Login Sucessfull!,Welcome "+data.name);
                 window.localStorage.setItem("loginname",data.name);
                 window.location="search.html";
                       
@@ -63,10 +63,10 @@
 <input type="button" id="button" onClick =  "move()" />
     
 </div>
-</form>
-    <p class="pclass"> don't have an account? <a href="signup.html"><u>Sign up</u></a></p>
-    <p class="pclass">or</p>
-    <img src="images/fb_login.png" width="206" height="49" onclick="login();" />
+</form><br />
+    <p class="pclass"> don't have an account? <a href="signup.html"><u>Sign up</u></a></p><br /><br />
+    <p class="pclass">or</p><br /><br />
+    <img src="images/fb_login.png" width="206" height="49" onclick="login();" /><br /><br /><br />
     <p class="pclass"><a href="needhelp.html">need help?</a></p>
     <script>
             function login() {
