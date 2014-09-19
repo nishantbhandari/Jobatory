@@ -5,7 +5,10 @@
 <meta name="msapplication-tap-highlight" content="no">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>   
     <script>
+        
     
+        
+        
     function clicked(){
 
         localStorage.setItem("business", document.getElementById('business-name').value);
@@ -23,17 +26,25 @@
 </nav>
 <form name="form1">
 <div style="text-align:center;" id="login"> <br />
-    <p id="#welcome" class="pclass"> Welcome,</p> <p id="username">heyy</p><br /><br />
+    <p id="#welcome" class="pclass"> Welcome,</p> <p id="username"></p><br /><br />
 
 <input type="text" name="business-name"  id="business-name" class="loginT" placeholder="Business type or name" align="center"/><br /> 
 <input type="text" name="location" id="location" class="loginT" placeholder="Location" align="center" /><br />
 
 <input type="button" id="button" onclick="clicked()" />
-    
+    <a class="twitter-share-button"
+  href="https://twitter.com/share">
+Tweet
+</a>
+<script type="text/javascript">
+window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+</script>
 </div>
 </form>
-
-  
+<script>
+  var loginname = window.localStorage.getItem("loginname");
+        //alert(loginname); 
+        document.getElementById("username").innerHTML = loginname;
         </script>
 </body>
 </html>

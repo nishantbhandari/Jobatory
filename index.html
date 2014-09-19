@@ -3,7 +3,13 @@
 <meta charset="utf-8">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="msapplication-tap-highlight" content="no">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>   
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  
+    <script>
+        $( document ).ready(function() {
+    console.log( "ready!" );
+            
+});
+    </script>
     <script src="phonegap.js"></script>
         <script src="cdv-plugin-fb-connect.js"></script>
         <script src="facebook-js-sdk.js"></script>
@@ -12,10 +18,36 @@
     <script>
         function move()
         {
-            window.location="search.html";
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            //alert(email);
+            //alert(password);
+            var url = "http://tttales.net63.net/search.php?email="+email+"&password="+password+"";
+           // alert(url);
+            $.getJSON(url,{crossDomain: true, dataType : 'jsonp'},
+            function(data){
+            //alert(data.result);
+            if(data.result== 0)
+            {
+                alert("Invalid Login Details,Please try again.");
+                window.location="index.html";
+                      
+            }
+            else
+            {
+                alert("Login Sucessfull!");
+                window.localStorage.setItem("loginname",data.name);
+                window.location="search.html";
+                      
+            }
+            
+            
+          });
+          
         }
         
     </script> 
+    
     
 </head>
 <body>
