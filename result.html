@@ -6,13 +6,22 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>   
 <link rel="stylesheet" type="text/css" href="css/signup.css" />
 <meta name="viewport" content="width=320" />
-
+<script>
+    function share(){
+    window.location = dataURL;
+                window.plugins.socialsharing.share(null, 'Android filename', dataURL, null);// Now safe to use the Cordova API
+    alert(1);
+    }
+    
+    </script>
 </head>
 <body>
 
 <nav>
     <a href="search.html"><img src="images/back.png" style="float:left; margin:4px;"></a>
+        <h1 style="float:right;" onclick="share()">Share</h1>
 <h1 style="font-family:STAR;" >Employ Me</h1>
+
 </nav>
 <iframe id="myFrame" height="100%" width="100%" style="border:none;" src="">
 
