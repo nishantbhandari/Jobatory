@@ -5,12 +5,14 @@
 <meta name="msapplication-tap-highlight" content="no">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>   
 <link rel="stylesheet" type="text/css" href="css/signup.css" />
+    <script src="cordova.js"></script>   
+
 <meta name="viewport" content="width=320" />
 <script>
     function share(){
-    window.location = dataURL;
-                window.plugins.socialsharing.share(null, 'Android filename', dataURL, null);// Now safe to use the Cordova API
-    alert(1);
+
+//window.plugins.socialsharing.shareViaTwitter('Message via Twitter');
+alert(1);
     }
     
     </script>
