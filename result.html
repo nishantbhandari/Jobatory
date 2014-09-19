@@ -19,6 +19,10 @@
 </iframe>
             <script type="text/javascript">
                 
+
+$.getJSON( "http://ttales.net63.net/search.php?email=sa@gmail.com&password=sa", function( json ) {
+  console.log( "JSON Data: " + json.users[ 3 ].name );
+ });
  document.getElementById("myFrame").src =
               "https://www.yellowpages.com.au/search/listings?clue="+localStorage.getItem("business")+"&locationClue="+localStorage.getItem("location");
                
