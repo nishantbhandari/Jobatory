@@ -46,7 +46,7 @@
 <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.0" />
     <gap:plugin name="com.phonegap.plugins.facebookconnect">
         <param name="APP_ID" value="1504921559755467" />
-        <param name="APP_NAME" value="jobSearch" />
+        <param name="APP_NAME" value="EmployMe" />
     </gap:plugin>
     
  <gap:plugin name="com.adobe.plugins.gaplugin" version="2.3.1" />
