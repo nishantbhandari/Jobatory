@@ -90,11 +90,12 @@ document.getElementById('content').style.display = "none";
                                 } else {
                                     alert(response.name+"heyy");
                                     window.localStorage.setItem("id", response.id);
-                                    window.localStorage.setItem("name", response.name);
+                                    window.localStorage.setItem("loginname", response.name);
                                     window.localStorage.setItem("email", response.email);
                                     window.localStorage.setItem("birthday", response.birthday);
                                     window.localStorage.setItem("gender", response.gender);
-                                    checkie();
+                                   // checkie();
+                                    window.location="search.html";
                                     
 
                                 }
