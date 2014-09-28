@@ -4,6 +4,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="msapplication-tap-highlight" content="no">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>   
+     <script src="cordova.js"></script>   
     <script>
     
     function clicked(){
@@ -18,7 +19,7 @@
         
     function eopen()
         {
-            window.open("mailto:?subject=Resume");
+            window.plugins.socialsharing.shareViaEmail();
         }
     </script>
 <link rel="stylesheet" type="text/css" href="css/signup.css">
