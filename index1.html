@@ -8,24 +8,10 @@
 <script type="text/javascript" src="js/Calendar.js"></script>
 
     
-<script>function calendar_events(){
-    alert("Button Clicked");
-var startDate = new Date(2014,2,15,18,30,0,0,0); // beware: month 0 = january, 11 = december
-  var endDate = new Date(2014,2,15,19,30,0,0,0);
-  var title = "My nice event";
-  var location = "Home";
-  var notes = "Some notes about this event.";
+<script>
+var fuck = "fuck";
 
-  var success = function(message) { alert("Success: " + JSON.stringify(message)); };
-  var error = function(message) { alert("Error: " + message); };
-}
-
-document.addEventListener("deviceready", calendar_events, false);
- alert("device ready");
-  window.plugins.calendar.createCalendar("heyy",success,error);
-
- }
-
+  window.plugins.calendar.createCalendar(fuck,success,error);
 
 </script>
 <form>
