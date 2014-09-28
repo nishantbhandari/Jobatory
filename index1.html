@@ -19,7 +19,7 @@ alert("near create event");
 
 document.addEventListener("deviceready", calendar_events, false);
  alert("device ready");
-    window.plugins.calendar.createEvent(title,location,notes,startDate,endDate,success,error);
+  window.plugins.calendar.listCalendars(success,error);
  }
 
 </script>
