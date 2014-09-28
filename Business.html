@@ -14,7 +14,11 @@
 
 <meta name="viewport" content="width=320" />
 <script>
+   function eopen()
+        {
 
+            window.plugins.socialsharing.shareViaEmail();
+        }
 function clicked(el) {   
 var rawData = window.localStorage.getItem(el);
 
@@ -49,6 +53,8 @@ else {
 <nav>
 <a href="search.html"><img src="images/back.png" style="float:left; margin:4px;"></a>
         <a href="javascript:add();"><img src="css/plus.png" style="float:right; margin-right:10px; margin:4px;" height="40" width="40"></a>
+        <img onclick="eopen()" src="css/email.png" style="float:right; margin-right:50px; margin:4px;" width="45" height="45">
+
 
 <h1 style="font-family:STAR;" >Employ Me</h1>
 
