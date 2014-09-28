@@ -15,6 +15,11 @@
         window.location = "result.html";
 
     }
+        
+    function eopen()
+        {
+            window.open("mailto:?subject=Resume");
+        }
     </script>
 <link rel="stylesheet" type="text/css" href="css/signup.css">
 <meta name="viewport" content="width=320" />
@@ -31,7 +36,8 @@
 
 <input type="text" name="business-name"  id="business-name" class="loginT" placeholder="Business type or name" align="center"/><br /> 
 <input type="text" name="location" id="location" class="loginT" placeholder="Location" align="center" /><br />
-<input type="button" id="button" onclick="clicked()" />
+<input type="button" id="button" onclick="clicked()" /><br /><br /><br />
+<input type="button" id="ebutton"  onclick="eopen()" value = "Email" />    
     <br /><br /><br /><br />
     <script>
     var loginname = window.localStorage.getItem('loginname');
