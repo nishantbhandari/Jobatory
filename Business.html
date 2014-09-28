@@ -1,29 +1,35 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="msapplication-tap-highlight" content="no">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>   
+<link rel="stylesheet" type="text/css" href="css/signup.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+    <script src="cordova.js"></script>   
+
+<meta name="viewport" content="width=320" />
 </head>
 <body>
+<nav>
+<a href="search.html"><img src="images/back.png" style="float:left; margin:4px;"></a>
+<h1 style="text-shadow:none; margin:none; font-family:STAR;" >Employ Me</h1>
 
-<div data-role="page" id="pageone">
-  <div data-role="main" class="ui-content">
-    <h2>A standard list:</h2>
+</nav>
+
+  <div data-role="main" class="ui-content" style="background-color:#000000;">
+    <h2 style="color:#ffffff; text-shadow:none;">Skills</h2>
     <ul data-role="listview">
       <li><a href="#">List Item</a></li>
       <li><a href="#">List Item</a></li>
       <li><a href="#">List Item</a></li>
     </ul><br>
-    <h2>List with data-inset="true":</h2>
-    <ul data-role="listview" data-inset="true">
-      <li><a href="#">List Item</a></li>
-      <li><a href="#">List Item</a></li>
-      <li><a href="#">List Item</a></li>
-    </ul>
+
   </div>
-</div> 
+
+  
 
 </body>
 </html>
