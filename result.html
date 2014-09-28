@@ -13,13 +13,22 @@
 window.plugins.socialsharing.shareViaTwitter('Hey! I got a Job using #EmployMe App!');
     }
     
+    function say()
+    {
+        alert("Good Morning,My name is " +loginname+",and and I was just enquiring whether you had any work available.");
+    }
+    
+    
     </script>
+    
 </head>
 <body>
 
 <nav>
     <a href="search.html"><img src="images/back.png" style="float:left; margin:4px;"></a>
-<img onclick="share()" src="images/share.png" style="float:right; margin-right:10px;" width="40" height="40">
+<img  onclick="share()" src="images/share.png" style="float:right; margin-right:10px;" width="40" height="40">
+    <img  onclick="say()" src="images/question.png" style="float:right; margin-right:40px;" width="40" height="40">
+    
 <h1 style="font-family:STAR;" >Employ Me</h1>
 
 </nav>
@@ -37,7 +46,10 @@ $.getJSON( "http://ttales.net63.net/search.php?email=sa@gmail.com&password=sa", 
                
 
 
-
+    var loginname = window.localStorage.getItem('loginname');
+    
+    //alert(loginname); 
+    
                 
     </script>
   
