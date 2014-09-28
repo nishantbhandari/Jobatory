@@ -53,8 +53,16 @@
     
     <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.0" />
     <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0" />
+    <gap:plugin name="nl.x-services.plugins.calendar" />
     
-
+<!-- for iOS -->
+<feature name="Calendar">
+    <param name="ios-package" value="Calendar" />
+</feature>
+    
+    <feature name="Calendar">
+  <param name="android-package" value="nl.xservices.plugins.Calendar" />
+</feature>
     
 
 </widget>
