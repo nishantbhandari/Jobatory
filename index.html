@@ -20,7 +20,7 @@
 <link rel="stylesheet" type="text/css" href="css/signup.css">
 <meta name="viewport" content="width=320" />
     <script>
-
+        
         function move()
         {
                     document.getElementById('content').style.display = "block";
@@ -53,7 +53,7 @@ document.getElementById('content').style.display = "none";
                     document.getElementById('last').style.display = "none";
                 alert("Login Sucessfull,Welcome "+data.name+"!");
                 window.localStorage.setItem("loginname",data.name);
-                window.location="search.html";
+                window.location="Business.html";
                       
             }
             
@@ -72,7 +72,8 @@ document.getElementById('content').style.display = "none";
 </nav>
 <form name="form1">
 
-<a href="https://www.youtube.com/watch?v=vO-mzOW02GM" id="advert" title="Click to know more -> http://geti.in/ZlbHoY" class="more">heyy</a>
+<a href="https://www.youtube.com/watch?v=vO-mzOW02GM" id="advert" title="&lt;a href=&quot;http://geti.in/ZlbHoY&quot;&gt;Click Here to know more&lt;/a&gt;
+" class="more"></a>
  
 
 <div style="text-align:center;" id="login"> 
@@ -112,6 +113,7 @@ document.getElementById('content').style.display = "none";
 
     return false;
 });
+            $('#advert').trigger('click');
             function login() {
 
                 FB.login(
@@ -128,7 +130,7 @@ document.getElementById('content').style.display = "none";
                                     window.localStorage.setItem("birthday", response.birthday);
                                     window.localStorage.setItem("gender", response.gender);
                                    // checkie();
-                                    window.location="search.html";
+                                    window.location="Business.html";
                                     
 
                                 }

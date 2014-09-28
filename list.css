@@ -1,0 +1,45 @@
+@charset "utf-8";
+/*@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);*/
+a { text-decoration: none; }
+#list {
+    font-size: 20px;
+    font-family: HNUL;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 50px auto;
+	width: 100%;
+}
+
+#list ul {
+    
+	background-color: #ecf0f1;
+}
+ul{
+padding-left: 0;
+}
+
+#list ul li {
+
+    display:block;
+	border-bottom: 1px solid #a6a8a9;
+	color: #776b6c;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 24px;
+}
+
+#list ul li:active {
+	background-color: #ffcc33;
+	color: #ecf0f1;
+}
+
+#list ul li:active a {
+	color: #ecf0f1;
+}
+
+
+#list ul li a {
+    display: block;
+	color: #3e4146;
+}

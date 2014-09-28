@@ -4,32 +4,108 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="msapplication-tap-highlight" content="no">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>   
-<link rel="stylesheet" type="text/css" href="css/signup.css" />
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/signup.css" />
+
+    <link rel="stylesheet" type="text/css" href="list.css" />
+
+
     <script src="cordova.js"></script>   
 
 <meta name="viewport" content="width=320" />
+<script>
+
+function clicked(el) {   
+var rawData = window.localStorage.getItem(el);
+
+    window.localStorage.setItem("searchID",rawData);
+    window.location = 'result.html'
+    
+}
+    function initialD(){
+        document.getElementById('ullist').innerHTML = "";
+     for (i = 1; i < 11; i++) {
+         
+         var checkval = window.localStorage.getItem(i);
+         
+         if (checkval)
+         {
+         var newDoc = document.getElementById('ullist').innerHTML;    
+         document.getElementById('ullist').innerHTML = newDoc+'<li class="clearfix"> <a href="javascript:clicked('+i+');">'+window.localStorage.getItem(i)+'</a></li>';
+
+
+         }
+else {
+  var new1 = i;
+    break;
+}
+         
+             
+    }
+    }
+    </script>
 </head>
 <body>
 <nav>
 <a href="search.html"><img src="images/back.png" style="float:left; margin:4px;"></a>
-<h1 style="text-shadow:none; margin:none; font-family:STAR;" >Employ Me</h1>
+        <a href="javascript:add();"><img src="css/plus.png" style="float:right; margin-right:10px; margin:4px;" height="40" width="40"></a>
+
+<h1 style="font-family:STAR;" >Employ Me</h1>
 
 </nav>
 
-  <div data-role="main" class="ui-content" style="background-color:#000000;">
-    <h2 style="color:#ffffff; text-shadow:none;">Skills</h2>
-    <ul data-role="listview">
-      <li><a href="#">List Item</a></li>
-      <li><a href="#">List Item</a></li>
-      <li><a href="#">List Item</a></li>
-    </ul><br>
 
-  </div>
+<div id="list">
+		<ul id="ullist">
 
+
+
+		</ul>
+
+
+
+
+	</div> 
   
+<script>
 
+
+
+
+     for (i = 1; i < 11; i++) {
+         
+         var checkval = window.localStorage.getItem(i);
+         
+         if (checkval)
+         {
+         var newDoc = document.getElementById('ullist').innerHTML;    
+         document.getElementById('ullist').innerHTML = newDoc+'<li class="clearfix"> <a href="javascript:clicked('+i+');">'+window.localStorage.getItem(i)+'</a></li>';
+
+
+         }
+else {
+  var new1 = i;
+    break;
+}
+         
+             
+    }
+
+
+                function add(){
+ var person = prompt("Please enter the name of the business", "Business");
+
+if(new1==11){
+new1 = 1;
+}
+window.localStorage.setItem(new1,person);
+new1++;
+
+                    initialD();
+
+    }
+
+
+    </script>
 </body>
 </html>
