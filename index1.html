@@ -6,23 +6,22 @@
 <script type="text/javascript" src="js/Calendar.js"></script>
     
 <script>function calendar_events(){
-var startDate = new Date("October 24, 2014 13:00:00");
-var endDate = new Date("October 24, 2014 14:30:00");
-var title = "My nice event";
-var location = "Home";
-var notes = "Some notes about this event.";
-var success = function(message) { alert("Success: " + JSON.stringify(message)); };
-var error = function(message) { alert("Error: " + message); };
-var calendarName = "iCal";
+    alert("Button Clicked");
+ var startDate = new Date(2014,9,18,18,30,0,0,0); // beware: month 0 = january, 11 = december
+  var endDate = new Date(2014,9,18,19,30,0,0,0);
+  var title = "My nice event";
+  var location = "Home";
+  var notes = "Some notes about this event.";
+    alert("Varaibles FEtched ");
+  var success = function(message) { alert("Success: " + JSON.stringify(message)); };
+  var error = function(message) { alert("Error: " + message); };
+alert("near create event");
 
-// create a calendar (iOS only for now)
-window.plugins.calendar.createCalendar(calendarName,success,error);
-
-// create in a named calendar (iOS only for now)
-window.plugins.calendar.createEventInNamedCalendar(title,location,notes,startDate,endDate,calendarName,success,error);
- }
- document.addEventListener("deviceready", calendar_events, false);
+document.addEventListener("deviceready", calendar_events, false);
  alert("device ready");
+    window.plugins.calendar.createEvent(title,location,notes,startDate,endDate,success,error);
+ }
+
 </script>
 <form>
    <img src="images/fb_login.png" width="206" height="49" onclick="calendar_events();" /><br /><br /><br />
