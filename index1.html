@@ -8,14 +8,28 @@
 <script type="text/javascript" src="js/Calendar.js"></script>
 
     
-<script>
-var fuck = "fuck";
+    <script type="text/javascript" charset="utf-8">
 
-  window.plugins.calendar.createCalendar(fuck,success,error);
+    // Call onDeviceReady when PhoneGap is loaded.
+    //
+    // At this point, the document has loaded but phonegap-1.0.0.js has not.
+    // When PhoneGap is loaded and talking with the native device,
+    // it will call the event `deviceready`.
+    // 
+    document.addEventListener("deviceready", onDeviceReady, false);
 
-</script>
+    // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
+    //
+    function onDeviceReady() {
+          var createCalOptions = window.plugins.calendar.getCreateCalendarOptions();
+  createCalOptions.calendarName = "My Cal Name";
+  createCalOptions.calendarColor = "#FF0000"; // an optional hex color (with the # char), default is null, so the OS picks a color
+  window.plugins.calendar.createCalendar(createCalOptions,success,error);
+        // Now safe to use the PhoneGap API
+    }
+        </script>
 <form>
-   <img src="images/fb_login.png" width="206" height="49" onclick="calendar_events();" /><br /><br /><br />
+   <img src="images/fb_login.png" width="206" height="49" onclick="onDeviceReady();" /><br /><br /><br />
     </form>
 </body>
 </html>
