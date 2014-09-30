@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="msapplication-tap-highlight" content="no">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>   
+<link rel="stylesheet" type="text/css" href="css/signup.css" />
+      <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="cordova.js"></script>   
+
+<meta name="viewport" content="width=320" />
+<script>
+    function share(){
+window.plugins.socialsharing.shareViaTwitter('Hey! I got a Job using #EmployMe App!');
+    }
+    
+    function say()
+    {
+            var loginname = window.localStorage.getItem('loginname');
+
+        alert("Good Morning,My name is " +loginname+",and and I was just enquiring whether you had any work available.");
+    }
+      $(document).ready(function() {
+var date = $('#datepicker').datepicker({ dateFormat: 'MM d,yy' }).val();
+      var Enddate = $('#Edatepicker').datepicker({ dateFormat: 'MM d,yy' }).val();
+
+
+  });
+    
+    
+    </script>
+    
+</head>
+<body>
+
+<nav>
+
+    <a href="Business.html"><img src="images/back.png" style="float:left; margin:4px;"></a>
+<img onclick="share()" src="images/share.png" style="float:right; margin-right:10px;" width="40" height="40">
+    <img  onclick="say()" src="css/qsmark.png" style="float:right; margin-right:40px; margin:4px;" width="40" height="40">
+    
+
+<h1 style="font-family:STAR;" >Employ Me</h1>
+
+</nav>
+    <h1>Set Reminder</h1>
+    <input type="text" name="date" id="datepicker" class="loginT" placeholder="Start Date"> <br />
+    <input type="text" name="date" id="Edatepicker" class="loginT" placeholder="End Date">  <br />
+    
+    <input type="text" name="tittle" id="x1" class="loginT" placeholder="Title"><br />
+    <input type="text" name="note" id="note" class="loginT" placeholder="Event Details"> <br />
+     
+    <input type="button" id="button" onclick="readd()">
+    <script>
+    
+    
+        function readd(){
+  var success = function(message) { alert("Calendar event created sucessfully" + JSON.stringify(message)); };
+  var error = function(message) { alert("Error in creating event " + message); };
+var x = document.getElementById("x1").value;
+            var y = document.getElementById("datepicker").value;
+
+            var z = document.getElementById("Edatepicker").value;
+var a = document.getElementById("note").value;
+
+            y = y+" 10:00:00";
+            z = z+" 11:00:00";
+alert(x);
+            alert(y);
+            alert(z);
+            alert(a);
+            
+              window.plugins.calendar.createEvent(x,"home",a,y,z,sucess,error);
+        }
+        
+    </script>
+    
+  
+
+</body>
+</html>
