@@ -22,16 +22,8 @@
     // PhoneGap is loaded and it is now safe to make calls PhoneGap methods
     //
     function onDeviceReady() {
-var startDate = new Date("October 24, 2014 13:00:00");
-  var endDate = new Date("October 25, 2014 14:30:00");
-  var title = "My nice event";
-  var location = "Home";
-  var notes = "Some notes about this event.";
-  var success = function(message) { alert("Success: " + JSON.stringify(message)); };
-  var error = function(message) { alert("Error: " + message); };
 
   // create
-  window.plugins.calendar.createEvent(title,location,notes,startDate,endDate,success,error);
 
     }
 
@@ -59,6 +51,16 @@ var date = $('#datepicker').datepicker({ dateFormat: 'MM d,yy' }).val();
     
         function readd(){
         alert(1);
+            var startDate = new Date("October 24, 2014 13:00:00");
+  var endDate = new Date("October 25, 2014 14:30:00");
+  var title = "My nice event";
+  var location = "Home";
+  var notes = "Some notes about this event.";
+  var success = function(message) { alert("Success: " + JSON.stringify(message)); };
+  var error = function(message) { alert("Error: " + message); };
+
+              window.plugins.calendar.createEvent(title,location,notes,startDate,endDate,success,error);
+
 var x = document.getElementById("x1").value;
 console.log(x);
         }
