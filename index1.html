@@ -10,6 +10,9 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     
     <script type="text/javascript" charset="utf-8">
+        
+        
+        
 
     // Call onDeviceReady when PhoneGap is loaded.
     //
@@ -40,12 +43,14 @@ var date = $('#datepicker').datepicker({ dateFormat: 'MM d,yy' }).val();
     
 <body>
     
-    <input type="text" name="date" id="datepicker"> 
-    <input type="text" name="date" id="Edatepicker"> 
+   <h1>Set Reminder</h1>
+    <input type="text" name="date" id="datepicker" class="loginT" placeholder="Start Date"> <br />
+    <input type="text" name="date" id="Edatepicker" class="loginT" placeholder="End Date">  <br />
     
-    <input type="text" name  ="tittle" id="x1">
-    
-    <input type="button" onclick="readd()">
+    <input type="text" name="tittle" id="x1" class="loginT" placeholder="Title"><br />
+    <input type="text" name="note" id="note" class="loginT" placeholder="Event Details"> <br />
+     
+    <input type="button" id="button" onclick="readd()">
     <script>
     
     
