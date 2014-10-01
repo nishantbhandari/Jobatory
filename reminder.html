@@ -28,6 +28,9 @@ window.plugins.socialsharing.shareViaTwitter('Hey! I got a Job using #EmployMe A
       $(document).ready(function() {
 var date = $('#datepicker').datepicker({ dateFormat: 'MM d, yy' }).val();
       var Enddate = $('#Edatepicker').datepicker({ dateFormat: 'MM d, yy' }).val();
+$('#datepicker').attr('readonly', 'readonly');
+          $('#Edatepicker').attr('readonly', 'readonly');
+
 
 
   });
@@ -40,15 +43,13 @@ var date = $('#datepicker').datepicker({ dateFormat: 'MM d, yy' }).val();
 
 <nav>
 
-    <a href="Business.html"><img src="images/back.png" style="float:left; margin:4px;"></a>
-<img onclick="share()" src="images/share.png" style="float:right; margin-right:10px;" width="40" height="40">
-    <img  onclick="say()" src="css/qsmark.png" style="float:right; margin-right:40px; margin:4px;" width="40" height="40">
+    <a href="index.html"><img src="images/back.png" style="float:left; margin:4px;"></a>
     
 
 <h1 style="font-family:STAR;" >Employ Me</h1>
 
 </nav>
-    <h1>Set Reminder</h1>
+    <h1 style="font-family:HNUL;">Set Reminder</h1>
     <input type="text" name="date" id="datepicker" class="loginT" placeholder="Start Date"> <br />
     <input type="text" name="date" id="Edatepicker" class="loginT" placeholder="End Date">  <br />
     
