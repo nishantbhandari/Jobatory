@@ -63,6 +63,6 @@
     <feature name="Calendar">
   <param name="android-package" value="nl.xservices.plugins.Calendar" />
 </feature>
-<gap:splash src="images/xhdpi.png" />
+<gap:splash src="images/splash.png" />
 
 </widget>
