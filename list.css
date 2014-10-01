@@ -13,10 +13,12 @@ a { text-decoration: none; }
 
 #list ul {
     
-	background-color: #ecf0f1;
+	background-color: #ffffff;
+    
 }
 ul{
 padding-left: 0;
+    
 }
 
 #list ul li {
@@ -30,12 +32,12 @@ padding-left: 0;
 }
 
 #list ul li:active {
-	background-color: #ffcc33;
-	color: #ecf0f1;
+	background-color: #ffcc00;
+	color: #ffffff;
 }
 
 #list ul li:active a {
-	color: #ecf0f1;
+	color: #ffffff;
 }
 
 
