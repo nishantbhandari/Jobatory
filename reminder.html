@@ -68,7 +68,8 @@ var x = document.getElementById("x1").value;
             var z = document.getElementById("Edatepicker").value;
 var a = document.getElementById("note").value;
             var h = "Home";
-
+            var startDate = new Date(y);
+            var endDate = new Date(z);
             y = y+" 10:00:00";
             z = z+" 11:00:00";
             alert(x);
@@ -77,9 +78,9 @@ var a = document.getElementById("note").value;
             alert(a);
             
 
-            window.plugins.calendar.createEvent(x,"home",a,y,z,success,error);
+            window.plugins.calendar.createEvent(x,"home",a,startDate,endDate,success,error);
 
-            window.plugins.calendar.createEvent("test","Home","Testhai","October 21, 2014 13:00:00","October 21, 2014 13:00:00",success,error);
+
 
         }
         
