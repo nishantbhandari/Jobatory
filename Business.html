@@ -48,17 +48,31 @@ else {
              
     }
     }
+    
+    function logout()
+    {
+        if (confirm("Do you want to logout , All your saved business will be deleted?") == true) {
+        localStorage.clear();
+        window.location = "index.html";
+    } else {
+        window.location = "Business.html";
+
+    }
+
+      
+        
+    }
     </script>
 </head>
 <body>
 <nav>
-    <a href="index.html"><img src="images/back.png" style="float:left; margin-left:5px; margin-top:10px; margin-bottom:10px;" width="40" height="30" ></a>
+    <a href="javascript:logout();"><img src="images/back.png" style="float:left; margin-left:5px; margin-top:10px; margin-bottom:10px;" width="40" height="30" ></a>
         <a href="javascript:add();"><img src="css/plus.png" style="float:right; margin-right:10px; margin-top:10px; margin-bottom:10px;" height="30" width="30"></a>
         <img onclick="eopen()" src="css/email.png" style="float:right; margin-right:15px; margin-top:10px; margin-bottom:10px;" width="30" height="30">
 
 
 <h1 style="font-family:STAR;" >Employ Me</h1>
-
+ <p id="#welcome" class="pclass"> Welcome,</p> <p id="username"></p><br /><br />
 </nav>
 
 
@@ -73,8 +87,14 @@ else {
 
 
 	</div> 
-  
+     <script>
+    var loginname = window.localStorage.getItem('loginname');
+    document.getElementById('username').innerHTML = loginname;
+    //alert(loginname); 
+    </script>
+    
 <script>
+    
 
 
 

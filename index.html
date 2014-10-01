@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
 
     <script>
+        var check = window.localStorage.getItem('loginname');
+        if(check)
+        {
+           window.location = "business.html"
+            
+        }
+        
+        
+        
         $( document ).ready(function() {
     console.log( "ready!" );
             
@@ -23,9 +32,9 @@
         
         function move()
         {
-                    document.getElementById('content').style.display = "block";
+        document.getElementById('content').style.display = "block";
         document.getElementById('login').style.display = "none";
-                    document.getElementById('last').style.display = "none";
+        document.getElementById('last').style.display = "none";
 
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
@@ -48,9 +57,9 @@ document.getElementById('content').style.display = "none";
             }
             else
             {
-                                  document.getElementById('content').style.display = "block";
-        document.getElementById('login').style.display = "none";
-                    document.getElementById('last').style.display = "none";
+                document.getElementById('content').style.display = "block";
+                document.getElementById('login').style.display = "none";
+                document.getElementById('last').style.display = "none";
                 alert("Login Sucessfull,Welcome "+data.name+"!");
                 window.localStorage.setItem("loginname",data.name);
                 window.location="Business.html";
