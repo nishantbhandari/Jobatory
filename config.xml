@@ -54,7 +54,7 @@
     <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.0" />
     <gap:plugin name="de.appplant.cordova.plugin.hidden-statusbar-overlay" version="1.2.0" />
     <gap:plugin name="nl.x-services.plugins.calendar" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.1.0" />
+    <gap:plugin name="org.apache.cordova.inappbrowser"/>
     
 <!-- for iOS -->
 <feature name="Calendar">
