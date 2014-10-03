@@ -90,7 +90,7 @@ document.getElementById('content').style.display = "none";
     <p class="pclass"><a href="needhelp.html">need help?</a></p>
     </div>
         <script>
-                 $(document).ready(function(){       
+                        
 
                     $("a.more").click(function() {
     $.fancybox({
@@ -102,7 +102,7 @@ document.getElementById('content').style.display = "none";
             'width'     : 680,
             'height'        : 495,
             'href'          : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
-            'type'          : 'mp4',
+            'type'          : 'swf',
             'swf'           : {
                  'wmode'        : 'transparent',
                 'allowfullscreen'   : 'true'
@@ -111,7 +111,6 @@ document.getElementById('content').style.display = "none";
 
     return false;
 });
-                 });
             $('#advert').trigger('click');
             function login() {
                     document.getElementById('content').style.display = "block";
