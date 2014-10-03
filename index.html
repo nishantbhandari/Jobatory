@@ -138,24 +138,15 @@ document.getElementById('content').style.display = "none";
             }
 
             document.addEventListener('deviceready', function() {
-                                alert("gaplugin");
-
-                gaPlugin = window.plugins.gaPlugin;
-                gaPlugin.init(nativePluginResultHandler, nativePluginErrorHandler, "UA-4652074-30", 10);
                 try {
                     FB.init({appId: "1504921559755467", nativeInterface: CDV.FB, useCachedDialogs: false});
                     document.getElementById('data').innerHTML = "";
-                                    alert("try");
+
 
                 } catch (e) {
-                                    alert("catch");
 
-                    //   alert(e);
-                }
-                if (window.localStorage.getItem("id") != null && window.localStorage.getItem("name") != null && window.localStorage.getItem("email") != null && window.localStorage.getItem("birthday") != null) {
-                                    alert("switchie run");
 
-                    switchie();
+
                 }
 
             }, false);
@@ -172,58 +163,7 @@ document.getElementById('content').style.display = "none";
                 //alert('nativePluginErrorHandler - '+error);
                 console.log('nativePluginErrorHandler: ' + error);
             }
-            function switchie() {
-                                alert("switchie");
 
-                $("#prof_id").val(window.localStorage.getItem("id"));
-                $("#name").val(window.localStorage.getItem("name"));
-                $("#email").val(window.localStorage.getItem("email"));
-                $("#dob").val(window.localStorage.getItem("birthday"));
-                $("#gender").val(window.localStorage.getItem("gender"));
-                $("#logginn").hide();
-                document.write(window.localStorage.getItem("name"));
-                console.log(window.localStorage.getItem("name"));
-                console.log('Login Sucessful');
-                
-                
-            }
-
-            function  checkie() {
-                                alert("checkie");
-
-                $.ajax({
-                    url: "http://www.gooddeedmarathon.com/check.php",
-                    type: "POST",
-                    data: {prof_id: window.localStorage.getItem("id")},
-                    success: function(data) {
-
-                        if (data == 0) {
-                            switchie();
-                            $.ajax({
-                                url: "http://www.gooddeedmarathon.com/submitAndroid.php",
-                                type: "POST",
-                                data: $("#formm").serialize(),
-                                success: function(data) {
-                                    var cont = data.split("==");
-                                    window.localStorage.setItem("city", cont[0]);
-                                    window.localStorage.setItem("state", cont[1]);
-                                    window.localStorage.setItem("phone", cont[2]);
-                                    window.localStorage.setItem("pin", cont[3]);
-                                    window.localStorage.setItem("address", cont[4]);
-                                    window.location.href = "thank-you.html";
-                                    alert('Login Sucessful');
-                                   
-                                    
-                                }
-                            });
-                        } else {
-
-                            $("#logginn").hide();
-                        }
-                    }
-                });
-
-            }
         </script>
         <div id="content"><img src='loader.gif'></div>
 
