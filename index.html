@@ -57,6 +57,7 @@ document.getElementById('content').style.display = "none";
           });
           
         }
+        
     </script> 
     
     
@@ -65,14 +66,19 @@ document.getElementById('content').style.display = "none";
 <nav>
 <h1 style="font-family:STAR; " >Employ Me</h1>
 </nav>
+
+
 <form name="form1">
     <br /><br />
 <a href="https://www.youtube.com/watch?v=vO-mzOW02GM" id="advert" title="&lt;a href=&quot;#&quot; onclick=&quot;window.open(&#39;http://geti.in/ZlbHoY&#39;, &#39;_system&#39;);&quot;&gt;Click here to know more&lt;/a&gt;" class="more"></a>
+ 
+
 <div style="text-align:center;" id="login"> 
     <img src="images/fb_login.png" width="206" height="49" onclick="login();" /><br /><br /><br />
             <p class="pclass">or</p><br /><br />
 <input type="email" name="email"  id="email" class="loginT" placeholder="Email" align="center"/><br /> 
 <input type="password" name="password" id="password" class="loginT" placeholder="Password" align="center" /><br />
+
 <input type="button" id="button" onClick =  "move()" />
     
 </div>
@@ -119,13 +125,55 @@ document.getElementById('content').style.display = "none";
                                     window.localStorage.setItem("email", response.email);
                                     window.localStorage.setItem("birthday", response.birthday);
                                     window.localStorage.setItem("gender", response.gender);
+                                   // checkie();
                                     window.location="Business.html";
+                                    
+
                                 }
                             });
                         },
                         {scope: "email,user_birthday"}
                 );
             }
+
+            document.addEventListener('deviceready', function() {
+                gaPlugin = window.plugins.gaPlugin;
+                gaPlugin.init(nativePluginResultHandler, nativePluginErrorHandler, "UA-4652074-30", 10);
+                try {
+                    FB.init({appId: "1504921559755467", nativeInterface: CDV.FB, useCachedDialogs: false});
+                    document.getElementById('data').innerHTML = "";
+                } catch (e) {
+                    //   alert(e);
+                }
+                if (window.localStorage.getItem("id") != null && window.localStorage.getItem("name") != null && window.localStorage.getItem("email") != null && window.localStorage.getItem("birthday") != null) {
+                    switchie();
+                }
+
+            }, false);
+            function nativePluginResultHandler(result) {
+                //alert('nativePluginResultHandler - '+result);
+                console.log('nativePluginResultHandler: ' + result);
+
+            }
+
+            function nativePluginErrorHandler(error) {
+                //alert('nativePluginErrorHandler - '+error);
+                console.log('nativePluginErrorHandler: ' + error);
+            }
+            function switchie() {
+                $("#prof_id").val(window.localStorage.getItem("id"));
+                $("#name").val(window.localStorage.getItem("name"));
+                $("#email").val(window.localStorage.getItem("email"));
+                $("#dob").val(window.localStorage.getItem("birthday"));
+                $("#gender").val(window.localStorage.getItem("gender"));
+                $("#logginn").hide();
+                document.write(window.localStorage.getItem("name"));
+                console.log(window.localStorage.getItem("name"));
+                console.log('Login Sucessful');
+                
+                
+            }
+
             function  checkie() {
                 $.ajax({
                     url: "http://www.gooddeedmarathon.com/check.php",
