@@ -9,7 +9,17 @@
 
 <meta name="viewport" content="width=320" />
 <script>
-        function back(){
+
+    
+    $(document).ready(function () {
+        $('#myFrame').on('load', function () {
+            
+  document.getElementById('loaderImage').style.display = "none";
+            document.getElementById('myFrame').style.display = "block";
+
+        });
+    });
+function back(){
 
     if (confirm("Do you want to set a reminder?") == true) {
         window.location = "reminder.html";
@@ -47,11 +57,15 @@ window.plugins.socialsharing.share('Hey! I got a Job using #EmployMe App!');
 <h1 align="center" style="font-family:STAR;" >Employ Me</h1>
 
 </nav>
-<iframe id="myFrame" height="100%" width="100%" style="border:none;" src="">
+    <div>
+
+    <img src="loader.gif" style="margin-top:20px;" id="loaderImage">
+
+<iframe id="myFrame" height="100%" width="100%" style="border:none; display:none;" src="loader.gif">
 
 </iframe>
+        </div>
             <script type="text/javascript">
-                
  document.getElementById("myFrame").src =
               "https://www.yellowpages.com.au/search/listings?clue="+localStorage.getItem("searchID")+"";
                
