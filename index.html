@@ -137,30 +137,43 @@ document.getElementById('content').style.display = "none";
             }
 
             document.addEventListener('deviceready', function() {
+                                alert("gaplugin");
+
                 gaPlugin = window.plugins.gaPlugin;
                 gaPlugin.init(nativePluginResultHandler, nativePluginErrorHandler, "UA-4652074-30", 10);
                 try {
                     FB.init({appId: "1504921559755467", nativeInterface: CDV.FB, useCachedDialogs: false});
                     document.getElementById('data').innerHTML = "";
+                                    alert("try");
+
                 } catch (e) {
+                                    alert("catch");
+
                     //   alert(e);
                 }
                 if (window.localStorage.getItem("id") != null && window.localStorage.getItem("name") != null && window.localStorage.getItem("email") != null && window.localStorage.getItem("birthday") != null) {
+                                    alert("switchie run");
+
                     switchie();
                 }
 
             }, false);
             function nativePluginResultHandler(result) {
+                alert("nativepluginresult");
                 //alert('nativePluginResultHandler - '+result);
                 console.log('nativePluginResultHandler: ' + result);
 
             }
 
             function nativePluginErrorHandler(error) {
+                                alert("nativepluginerror");
+
                 //alert('nativePluginErrorHandler - '+error);
                 console.log('nativePluginErrorHandler: ' + error);
             }
             function switchie() {
+                                alert("switchie");
+
                 $("#prof_id").val(window.localStorage.getItem("id"));
                 $("#name").val(window.localStorage.getItem("name"));
                 $("#email").val(window.localStorage.getItem("email"));
@@ -175,6 +188,8 @@ document.getElementById('content').style.display = "none";
             }
 
             function  checkie() {
+                                alert("checkie");
+
                 $.ajax({
                     url: "http://www.gooddeedmarathon.com/check.php",
                     type: "POST",
