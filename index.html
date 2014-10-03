@@ -113,6 +113,9 @@ document.getElementById('content').style.display = "none";
 });
             $('#advert').trigger('click');
             function login() {
+                    document.getElementById('content').style.display = "block";
+        document.getElementById('login').style.display = "none";
+        document.getElementById('last').style.display = "none";
 
                 FB.login(
                         function(response) {
