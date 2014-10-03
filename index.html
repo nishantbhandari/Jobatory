@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -147,6 +147,11 @@ document.getElementById('content').style.display = "none";
 
 
 
+                }
+                if (window.localStorage.getItem("id") != null && window.localStorage.getItem("name") != null && window.localStorage.getItem("email") != null && window.localStorage.getItem("birthday") != null) {
+                                    alert("switchie run");
+
+                    switchie();
                 }
 
             }, false);
