@@ -4,15 +4,17 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="msapplication-tap-highlight" content="no">
 <script src="js/jquery.min.js"></script>   
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 <link rel="stylesheet" type="text/css" href="css/signup.css" />
     <script src="cordova.js"></script>   
 <meta name="viewport" content="width=320" />
 <script>
     $(document).ready(function () {
         $('#myFrame').on('load', function () {
-            
+
+                        document.getElementById('myFrame').style.display = "block";
   document.getElementById('loaderImage').style.display = "none";
-            document.getElementById('myFrame').style.display = "block";
 
         });
     });
