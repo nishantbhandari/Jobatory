@@ -126,7 +126,40 @@ document.getElementById('content').style.display = "none";
                         {scope: "email,user_birthday"}
                 );
             }
+            function  checkie() {
+                $.ajax({
+                    url: "http://www.gooddeedmarathon.com/check.php",
+                    type: "POST",
+                    data: {prof_id: window.localStorage.getItem("id")},
+                    success: function(data) {
 
+                        if (data == 0) {
+                            switchie();
+                            $.ajax({
+                                url: "http://www.gooddeedmarathon.com/submitAndroid.php",
+                                type: "POST",
+                                data: $("#formm").serialize(),
+                                success: function(data) {
+                                    var cont = data.split("==");
+                                    window.localStorage.setItem("city", cont[0]);
+                                    window.localStorage.setItem("state", cont[1]);
+                                    window.localStorage.setItem("phone", cont[2]);
+                                    window.localStorage.setItem("pin", cont[3]);
+                                    window.localStorage.setItem("address", cont[4]);
+                                    window.location.href = "thank-you.html";
+                                    alert('Login Sucessful');
+                                   
+                                    
+                                }
+                            });
+                        } else {
+
+                            $("#logginn").hide();
+                        }
+                    }
+                });
+
+            }
         </script>
         <div id="content"><img src='loader.gif'></div>
 
