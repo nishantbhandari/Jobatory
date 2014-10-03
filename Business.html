@@ -1,18 +1,16 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="msapplication-tap-highlight" content="no">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>   
+<meta name="viewport" content="width=320" />
 
+<script src="js/jquery.min.js"></script>   
     <link rel="stylesheet" type="text/css" href="css/signup.css" />
-
     <link rel="stylesheet" type="text/css" href="list.css" />
-
-
     <script src="cordova.js"></script>   
 
-<meta name="viewport" content="width=320" />
 <script>
 
    function eopen()
@@ -26,7 +24,7 @@ var rawData = window.localStorage.getItem(el);
     window.localStorage.setItem("searchID",rawData);
     window.location = 'result.html'
     
-}
+    }
     function initialD(){
         document.getElementById('ullist').innerHTML = "";
      for (i = 1; i < 11; i++) {
@@ -78,14 +76,7 @@ else {
 
 <div id="list">
 		<ul id="ullist">
-
-
-
 		</ul>
-
-
-
-
 	</div> 
      <script>
     var loginname = window.localStorage.getItem('loginname');
@@ -94,11 +85,6 @@ else {
     </script>
     
 <script>
-    
-
-
-
-
      for (i = 1; i < 11; i++) {
          
          var checkval = window.localStorage.getItem(i);
@@ -108,36 +94,26 @@ else {
          var newDoc = document.getElementById('ullist').innerHTML;    
          document.getElementById('ullist').innerHTML = newDoc+'<li class="clearfix"> <a href="javascript:clicked('+i+');">'+window.localStorage.getItem(i)+'</a></li>';
 
-
          }
 else {
   var new1 = i;
     break;
-}
+    }
          
              
     }
-
-
-                function add(){
- var person = prompt("Please enter the name of the business", "Business");
-
-if(new1==11){
-new1 = 1;
-}
-if(person){
-    window.localStorage.setItem(new1,person);
-    person = null;
-}
-                
-        
-new1++;
-
-                    initialD();
-
+ function add(){
+     var person = prompt("Please enter the name of the business", "Business");
+    if(new1==11){
+    new1 = 1;
     }
-
-
+    if(person){
+        window.localStorage.setItem(new1,person);
+        person = null;
+    }   
+    new1++;
+    initialD();
+    }
     </script>
 </body>
 </html>
