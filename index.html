@@ -6,10 +6,7 @@
 <meta name="viewport" content="width=320" />
 <meta name="msapplication-tap-highlight" content="no">
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-
-<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-    <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
 
         <script>
         var check = window.localStorage.getItem('loginname');
@@ -123,6 +120,9 @@ document.getElementById('content').style.display = "none";
 
                             FB.api('/me', function(response) {
                                 if (response.error) {
+                                            document.getElementById('content').style.display = "none";
+        document.getElementById('login').style.display = "block";
+        document.getElementById('last').style.display = "block";
                                     //alert(JSON.stringify(response.error));
                                 } else {
                                     
@@ -131,7 +131,6 @@ document.getElementById('content').style.display = "none";
                                     window.localStorage.setItem("email", response.email);
                                     window.localStorage.setItem("birthday", response.birthday);
                                     window.localStorage.setItem("gender", response.gender);
-                                   // checkie();
                                     window.location="Business.html";
                                     
 
