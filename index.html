@@ -117,7 +117,12 @@ document.getElementById('content').style.display = "none";
 
                 FB.login(
                         function(response) {
-
+                            if (response.authResponse) {
+                                                                        document.getElementById('content').style.display = "none";
+        document.getElementById('login').style.display = "block";
+        document.getElementById('last').style.display = "block";
+                            
+                            }
                             FB.api('/me', function(response) {
                                 if (response.error) {
                                             document.getElementById('content').style.display = "none";
