@@ -89,40 +89,16 @@ document.getElementById('content').style.display = "none";
     <p class="pclass"><a href="needhelp.html">need help?</a></p>
     </div>
         <script>
-                        
 
-                    $("a.more").click(function() {
-    $.fancybox({
-            'padding'       : 0,
-            'autoScale'     : false,
-            'transitionIn'  : 'none',
-            'transitionOut' : 'none',
-            'title'         : this.title,
-            'width'     : 680,
-            'height'        : 495,
-            'href'          : this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
-            'type'          : 'swf',
-            'swf'           : {
-                 'wmode'        : 'transparent',
-                'allowfullscreen'   : 'true'
-            }
-        });
-
-    return false;
-});
             function login() {
+                            setTimeout(function(){document.getElementById('content').style.display = "none";
+        document.getElementById('login').style.display = "block";
+        document.getElementById('last').style.display = "block";}, 7000);
                 
                     document.getElementById('content').style.display = "block";
         document.getElementById('login').style.display = "none";
         document.getElementById('last').style.display = "none";
-                setTimeout(function(){
-                                                    document.getElementById('content').style.display = "none";
-        document.getElementById('login').style.display = "block";
-        document.getElementById('last').style.display = "block";
                 
-                }, 7000);
-
-    });
 
                 FB.login(
                         function(response) {
