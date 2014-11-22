@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<widget xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.kunal.em.employmeapp" versionCode = "13" version = "1.0.0">
+<widget xmlns = "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.kunal.em.automation" versionCode = "13" version = "1.0.0">
 
 
-    <name>Employ Me</name>
+    <name>Home Automation</name>
     
-    <icon src="handshake.png" />
+    <icon src="automation.png" />
 
 
-    <author href="http://www.sushil-s.com/" email="sushil.sud@gmail.com">Kunal Khivensara </author>
+    <author href="http://www.kunalkhivensara.com/" email="sushil.sud@gmail.com">Kunal Khivensara </author>
 
   
     <access origin="*"/>
@@ -43,11 +43,7 @@
     <gap:platform name="android" />
     <gap:platform name="ios" />
   
-<gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.0" />
-    <gap:plugin name="com.phonegap.plugins.facebookconnect">
-        <param name="APP_ID" value="1504921559755467" />
-        <param name="APP_NAME" value="EmployMe" />
-    </gap:plugin>
+
     
  <gap:plugin name="com.adobe.plugins.gaplugin" version="2.3.1" />
     
@@ -57,27 +53,9 @@
     <gap:plugin name="org.apache.cordova.inappbrowser"/>
     
     <!-- iPhone and iPod touch -->
-<gap:splash src="images/Default.png" gap:platform="ios" width="320" height="480" />
-<gap:splash src="images/Default@2x.png" gap:platform="ios" width="640" height="960" />
-
-<!-- iPhone 5 / iPod Touch (5th Generation) -->
-<gap:splash src="images/Default-568h@2x.png" gap:platform="ios" width="640" height="1136" />
-    <gap:splash src="images/Default-Portrait.png" gap:platform="ios" width="768" height="1024" />
-    <gap:splash src="images/Default-Portrait@2x.png" gap:platform="ios" width="1536" height="2048" />
-  <gap:splash src="images/ldpi.png" gap:platform="android" gap:density="ldpi" />
-<gap:splash src="images/mdpi.png" gap:platform="android" gap:density="mdpi" />
-<gap:splash src="images/hdpi.png" gap:platform="android" gap:density="hdpi" />
-<gap:splash src="images/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
 
     
 <!-- for iOS -->
-<feature name="Calendar">
-    <param name="ios-package" value="Calendar" />
-</feature>
-    
-    <feature name="Calendar">
-  <param name="android-package" value="nl.xservices.plugins.Calendar" />
-</feature>
 
 
 </widget>
