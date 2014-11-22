@@ -5,6 +5,8 @@
     <name>Home Automation</name>
     
     <icon src="icon.png" />
+    <icon src="icon-60.png" gap:platform="ios" width="60" height="60" />
+    <icon src="icon-600.png" gap:platform="ios" width="120" height="120" />
 
 
     <author href="http://www.kunalkhivensara.com/" email="sushil.sud@gmail.com">Kunal Khivensara </author>
